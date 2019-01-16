@@ -1,5 +1,17 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>Data Issue</h1>
+
+<h3>Steps to reproduce</h3>
+<ol>
+  <li>Click on the "Colors" link</li>
+  <li>Add a new color using the text field and see that the color is added to both lists.</li>
+  <li>Click on the "Home link.</li>
+  <li>
+    Click on the "Colors" link again and notice that the top list using ember-data-storefront is
+    missing the new color, but the bottom list just using Ember data's peekAll has it.
+  </li>
+</ol>
+
+{{#link-to "application"}}Home{{/link-to}} |
+{{#link-to "colors"}}Colors{{/link-to}}
 
 {{outlet}}

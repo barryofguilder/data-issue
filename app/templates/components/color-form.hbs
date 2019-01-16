@@ -1,0 +1,18 @@
+<p>Colors using ember-data-storefront</p>
+<ul>
+  {{#each this.colors as |color|}}
+    <li>{{color.name}}</li>
+  {{/each}}
+</ul>
+
+<p>Colors using ember-data peekAll</p>
+<ul>
+  {{#each this.storeColors as |color|}}
+    <li>{{color.name}}</li>
+  {{/each}}
+</ul>
+
+<form onsubmit={{perform saveColor}}>
+  {{input value=colorName}}
+  <button type="submit">Add Color</button>
+</form>
